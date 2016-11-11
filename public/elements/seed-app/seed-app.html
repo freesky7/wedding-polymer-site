@@ -11,6 +11,8 @@
 <!-- px components -->
 <link rel="import" href="../../bower_components/px-app-nav/px-app-nav.html">
 <link rel="import" href="../../bower_components/px-view/px-view.html">
+<link rel="import" href="../../bower_components/iron-icons/editor-icons.html">
+<link rel="import" href="../../bower_components/iron-icons/notification-icons.html">
 
 <link rel="import" href="../ge-svg-logo/ge-svg-logo.html">
 <link rel="import" href="../predix-logo/predix-logo.html">
@@ -24,14 +26,13 @@
 
     <header role="banner" class="flex flex--middle">
       <div class="viewport flex">
-        <h2 class="flex__item" style="text-align:center;color: white">
+        <h2 class="flex__item" style="text-align:center;color: white;font-family:'Playfair Display',serif;font-size: 1.5em">
           Wedding Ceremony
         </h2>
       </div>
     </header>
 
     <div class="viewport">
-
       <div class="content-wrapper">
         <px-app-nav
           class="navbar"
@@ -48,6 +49,28 @@
             use-hash-as-path>
           </app-location>
 
+          <!-- /blankpage route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/welcome"
+            active="{{_welcomeActive}}">
+          </app-route>
+          <px-view
+            active="[[_welcomeActive]]"
+            element-href="/elements/views/welcome-view.html">
+          </px-view>
+          <!-- /dashboards rotue and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/wishes"
+            active="{{_wishesActive}}">
+          </app-route>
+
+          <px-view
+            active="[[_wishesActive]]"
+            element-href="/elements/views/wishes-view.html">
+          </px-view>
+
           <!-- /dashboards rotue and view -->
           <app-route
             route="[[_route]]"
@@ -58,17 +81,6 @@
           <px-view
             active="[[_dashboardsActive]]"
             element-href="/elements/views/dashboards-view.html">
-          </px-view>
-
-          <!-- /blankpage route and view -->
-          <app-route
-            route="[[_route]]"
-            pattern="/welcome"
-            active="{{_blankpageActive}}">
-          </app-route>
-          <px-view
-            active="[[_blankpageActive]]"
-            element-href="/elements/views/present-view.html">
           </px-view>
 
         </main>
@@ -107,11 +119,15 @@
             return [{
               "label": "Welcome",
               "path": "/welcome",
-              "icon": "fa-tachometer"
+              "icon": "fa:fa-tachometer"
+            }, {
+              "label": "Write your wish",
+              "path": "/wishes",
+              "icon": "editor:border-color"
             }, {
               "label": "Dashboards",
               "path": "/dashboards",
-              "icon": "fa-file-o"
+              "icon": "notification:wc"
             }]
           }
         },

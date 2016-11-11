@@ -2,7 +2,7 @@
 <link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
 <link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
 <link rel="import" href="../../bower_components/google-youtube/google-youtube.html">
-<dom-module id="present-view">
+<dom-module id="welcome-view">
   <template>
     <px-card header-text="Wedding Celebration" chevron="true" icon="fa-fighter-jet">
       <p>Thank you for comming and saving the date with us</p>
@@ -13,17 +13,17 @@
         width="480px"
         rel="0"
         start="5"
-        autoplay="1">
+        autoplay="0">
       </google-youtube>
 
     </px-card>
   </template>
   <script>
     Polymer({
-      is: 'present-view',
+      is: 'welcome-view',
       properties: {},
       ready: function() {
-        console.log('present-view ready()')
+        console.log('welcome-view ready()')
       }
     });
   </script>
