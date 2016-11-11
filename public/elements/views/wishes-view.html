@@ -1,12 +1,105 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
 <link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
+<link rel="import" href="../../bower_components/paper-header-panel/paper-header-panel.html">
+<script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-styles/demo-pages.html">
+
 <dom-module id="wishes-view">
+  
+ <style is="custom-style">
+      body {
+        @apply(--layout-inline);
+        @apply(--layout-center-center);
+        @apply(--layout-wrap);
+        padding: 40px;
+      }
+      paper-header-panel {
+        float: left;
+        width: 240px;
+        height: 160px;
+        margin: 10px;
+        @apply(--shadow-elevation-2dp);
+      }
+      .paper-header {
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        padding: 0 0px;
+        color: white;
+        text-align: center;
+        transition: height 0.2s;
+      }
+      .paper-header.tall {
+        height: 120px;
+      }
+      .paper-header.medium-tall {
+        height: 100px;
+        line-height: 50px;
+      }
+      .content {
+        height: 1000px;
+        font-family: 'Roboto', 'Noto', sans-serif;
+      }
+      .cover {
+        margin: 60px;
+      }
+      .blue .paper-header {
+        background-color: var(--paper-light-blue-500);
+      }
+      .red .paper-header {
+        background-color: var(--paper-red-500);
+      }
+      .orange .paper-header {
+        background-color: var(--paper-amber-500);
+      }
+      .green .paper-header {
+        background-color: var(--paper-green-500);
+      }
+      .cyan .paper-header {
+        background-color: var(--paper-cyan-500);
+      }
+      .lime .paper-header {
+        background-color: var(--paper-lime-500);
+      }
+      .pink .paper-header {
+        background-color: var(--paper-pink-a200);
+      }
+      /* TODO: replace these with background: linear-gradient(white, var(...))
+       when custom properties allow it */
+      .blue .content {
+        background: linear-gradient(white, #b3e5fc);
+      }
+      .red .content {
+        background: linear-gradient(white, #ffcdd2);
+      }
+      .orange .content {
+        background: linear-gradient(white, #ffecb3);
+      }
+      .green .content {
+        background: linear-gradient(white, #c8e6c9);
+      }
+      .cyan .content {
+        background: linear-gradient(white, #b2ebf2);
+      }
+      .lime .content {
+        background: linear-gradient(white, #f0f4c3);
+      }
+      .pink .content {
+        background: linear-gradient(white, #f8bbd0);
+      }
+    </style>
   <template>
-   <!--  <px-view-header title="Blank Card" style="display: block; margin-bottom: 6px;"></px-view-header>
+    <px-view-header title="Thanks for all your best wishes" style="display: block; margin-bottom: 6px;"></px-view-header>
     <blank-card id="myCard">
-      An example of a blank card without any content (except for this brief description).  Replace this with the actual content for your application.
-    </blank-card> -->
+
+      <paper-header-panel class="cyan">
+        <div class="paper-header">Sâu Béo</div>
+        <div class="content">Sâu Béo yêu sâu ngủ nắm</div>
+      </paper-header-panel>
+    </blank-card>
+    
   </template>
   <script>
     Polymer({
