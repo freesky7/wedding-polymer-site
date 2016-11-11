@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
+<link rel="import" href="../../bower_components/google-youtube/google-youtube.html">
+<dom-module id="present-view">
+  <template>
+    <px-card header-text="Wedding Celebration" chevron="true" icon="fa-fighter-jet">
+      <p>Thank you for comming and saving the date with us</p>
+      <!--Clip-->
+      <google-youtube
+        video-id="Eru8DlHoOFM"
+        height="270px"
+        width="480px"
+        rel="0"
+        start="5"
+        autoplay="1">
+      </google-youtube>
+
+    </px-card>
+  </template>
+  <script>
+    Polymer({
+      is: 'present-view',
+      properties: {},
+      ready: function() {
+        console.log('present-view ready()')
+      }
+    });
+  </script>
+</dom-module>
