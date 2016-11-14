@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
+
+<script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../../bower_components/polymer-simple-slider/simple-slider.html">
+
+<dom-module id="slides-view">
+  <template>
+    <px-card header-text="Wedding Images" chevron="true" icon="fa-fighter-jet">
+      <p align="right">“What i like about photographs is that they capture a moment that’s gone forever, impossible to reproduce.”</p>
+      <p align="right"> -- Karl Lagerfeld</p>
+      
+      <simple-slider style="width:700px; height:700px">
+        <img src="../../images/1.jpg"/>
+        <img src="../../images/2.jpg"/>
+        <img src="../../images/3.jpg"/>
+        <img src="../../images/4.jpg"/>
+        <img src="../../images/5.jpg"/>
+      </simple-slider>
+    </px-card>
+  </template>
+  <script>
+    Polymer({
+      is: 'slides-view',
+      properties: {},
+      ready: function() {
+        console.log('slides-view ready()')
+      }
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,36 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/px-sample-cards/blank-card.html">
+<link rel="import" href="../../bower_components/px-view-header/px-view-header.html">
+
+<script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../../bower_components/google-map/google-map.html">
+<link rel="import" href="../../bower_components/google-map/google-map-marker.html">
+
+<dom-module id="location-view">
+  <template>
+    <px-card header-text="Time & Location" icon="fa-fighter-jet">
+
+      <!-- <google-map latitude="10.35729" longitude="107.0843182" fit-to-markers api-key="AIzaSyD3E1D9b-Z7ekrT3tbhl_dy8DCXuIuDDRc">
+        <google-map-marker latitude="10.35729" longitude="107.0843182"
+            draggable="true" title="Merastis Restaurance"></google-map-marker>
+        <google-map-marker latitude="10.35729" longitude="107.0843182"></google-map-marker>
+      </google-map> -->
+    <!-- AIzaSyA-ccLnxHA2AxkTaxzZwXcDHgJlnZOmQL0 -->
+    <google-map fit-to-marker api-key="AIzaSyA-ccLnxHA2AxkTaxzZwXcDHgJlnZOmQL0">
+      <google-map-marker latitude="10.35729" longitude="107.0843182" 
+      draggable="true" title="Merastis Restaurance">
+        
+      </google-map-marker>
+    </google-map>
+    </px-card>
+  </template>
+  <script>
+    Polymer({
+      is: 'location-view',
+      properties: {},
+      ready: function() {
+        console.log('location-view ready()')
+      }
+    });
+  </script>
+</dom-module>

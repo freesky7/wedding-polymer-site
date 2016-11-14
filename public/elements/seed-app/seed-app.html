@@ -51,7 +51,7 @@
             use-hash-as-path>
           </app-location>
 
-          <!-- /blankpage route and view -->
+          <!-- /welcome route and view -->
           <app-route
             route="[[_route]]"
             pattern="/welcome"
@@ -61,7 +61,30 @@
             active="[[_welcomeActive]]"
             element-href="/elements/views/welcome-view.html">
           </px-view>
-          <!-- /dashboards rotue and view -->
+
+          <!-- /welcome route and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/location"
+            active="{{_locationActive}}">
+          </app-route>
+          <px-view
+            active="[[_locationActive]]"
+            element-href="/elements/views/location-view.html">
+          </px-view>
+
+          <!-- /slides rotue and view -->
+          <app-route
+            route="[[_route]]"
+            pattern="/slides"
+            active="{{_slidesActive}}">
+          </app-route>
+
+          <px-view
+            active="[[_slidesActive]]"
+            element-href="/elements/views/slides-view.html">
+          </px-view>
+          <!-- /Write wishes rotue and view -->
           <app-route
             route="[[_route]]"
             pattern="/wishes"
@@ -123,13 +146,17 @@
               "path": "/welcome",
               "icon": "fa:fa-tachometer"
             }, {
+              "label": "Images",
+              "path": "/slides",
+              "icon": "fa:fa-camera"
+            },{
               "label": "Time & Location",
               "path": "/location",
-              "icon": "communication:location-on"
+              "icon": "fa:fa-map-marker"
             }, {
               "label": "Write your wish",
               "path": "/wishes",
-              "icon": "editor:border-color"
+              "icon": "fa:fa-paper-plane"
             }, {
               "label": "Dashboards",
               "path": "/dashboards",
