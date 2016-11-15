@@ -79,7 +79,7 @@ var timeSeriesRoutes = require('./time-series-routes.js')();
 // add mock API routes.  (Remove these before deploying to production.)
 app.use('/api/view-service', jsonServer.router(viewServiceRoutes));
 app.use('/api/predix-asset', jsonServer.router(assetRoutes));
-app.use('/api/time-series', jsonServer.router(timeSeriesRoutes));
+//app.use('/api/time-series', jsonServer.router(timeSeriesRoutes));
 
 /****************************************************************************
 	SET UP EXPRESS ROUTES
